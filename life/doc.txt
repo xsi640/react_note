@@ -1,0 +1,17 @@
+1.初始化
+    初始化stats,props
+2.装载 创建实例
+    componentWillMount
+    只会在装载之前调用一次，在 render 之前调用，你可以在这个方法里面调用 setState 改变状态，并且不会导致额外调用一次 render
+    componentDidMount
+    只会在装载完成之后调用一次，在 render 之后调用，从这里开始可以通过 ReactDOM.findDOMNode(this) 获取到组件的 DOM 节点。
+
+3.更新 n次
+    componentWillReceiveProps
+    shouldComponentUpdate
+    componentWillUpdate
+    componentDidUpdate
+
+4.销毁
+    componentWillUnmount
+
