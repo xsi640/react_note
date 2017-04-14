@@ -4,7 +4,7 @@ class Row extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            person: this.props.person
+            person: this.props.getPersons
         };
         this.handlerDelete = this.handlerDelete.bind(this);
         this.handlerSave = this.handlerSave.bind(this);
@@ -50,7 +50,7 @@ class Row extends React.Component {
         } else {
             return (
                 <tr>
-                    <td>{this.props.person.id}</td>
+                    <td>{this.props.getPersons.id}</td>
                     <td>
                         <input type="text" className="form-control" name="name" placeholder="请输入姓名"
                                defaultValue={this.state.person.name}
